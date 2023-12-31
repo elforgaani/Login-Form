@@ -14,9 +14,8 @@ body {
 }
 
 .login-form {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     background-color: rgba(93, 163, 255, 0.2);
-    gap: 1rem;
     border: solid 2px rgba(102, 140, 189, 0.3)
 }
 
@@ -73,4 +72,26 @@ color: white;
 }
 .login-form h6 span{
     font-style: italic;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.popup-content {
+    position : relative;
+    padding-block-start: 3rem;
+    padding-block-end:1rem;
+}
+.popup-content .error-icon{
+    width : 100px;
+    height: 100px;
+    /* background-color: red; */
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
+    transition: all 2s;
 }
