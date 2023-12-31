@@ -1,0 +1,76 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+:root {
+    --title-font: 'Dancing Script', cursive;
+}
+
+#main {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1719%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1720%26quot%3b)'%3e%3c/rect%3e%3cpath d='M-172.76 259C-68.26 259.25 33.28 329 239.33 329 445.37 329 432.76 254.68 651.41 259 870.06 263.32 928.41 597.55 1063.5 622.2' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-232.14 247.9C-63.4 251.39 148.86 471.87 402.73 477.5 656.6 483.13 635.03 599.01 720.17 601.17' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-10.4 445.2C103.3 441.83 193.78 270.15 410.16 271.6 626.54 273.05 691.88 622.96 830.72 649.27' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-142.43 295.9C9.62 294.41 210.2 128.76 443.7 133.5 677.21 138.24 612.89 546.03 736.77 611.71' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-113.4 54.68C73.29 55.77 308.24 206.85 614.21 222.68 920.19 238.51 849.26 577.87 978.02 612.13' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1719'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1720'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(36%2c 92%2c 164%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form {
+    backdrop-filter: blur(10px);
+    background-color: rgba(93, 163, 255, 0.2);
+    gap: 1rem;
+    border: solid 2px rgba(102, 140, 189, 0.3)
+}
+
+.login-form h1 {
+    margin-block-end: 2rem;
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+
+.custom-btn {
+    background-color: #1a5fb9;
+    border-color: rgba(255, 255, 255, 0.3);
+margin-block: 1rem;
+color: white;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: #1a5fb9;
+    background-color: white;
+}
+
+.custom-btn:hover {
+    transform: translateY(-1px);
+}
+
+.custom-btn:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+
+.input-field {
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.input-field input {
+    padding-inline-start: 1.7rem;
+    padding-block: 0.5rem;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgba(0, 47, 121, 0.5);
+}
+.login-form h6 span{
+    font-style: italic;
+}
