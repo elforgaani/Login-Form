@@ -4,7 +4,7 @@ body {
 }
 
 :root {
-    --title-font: 'Dancing Script', cursive;
+    --title-font: 'Bebas Neue', sans-serif;
 }
 
 #main {
@@ -22,14 +22,14 @@ body {
 .login-form h1 {
     margin-block-end: 2rem;
     font-family: var(--title-font);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .custom-btn {
     background-color: #1a5fb9;
     border-color: rgba(255, 255, 255, 0.3);
-margin-block: 1rem;
-color: white;
+    margin-block: 1rem;
+    color: white;
 }
 
 .custom-btn:hover,
@@ -70,28 +70,48 @@ color: white;
     transform: translateY(-50%);
     color: rgba(0, 47, 121, 0.5);
 }
-.login-form h6 span{
+
+.login-form h6 span {
     font-style: italic;
 }
-.popup{
+
+.popup {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
+
 .popup-content {
-    position : relative;
+    position: relative;
     padding-block-start: 3rem;
-    padding-block-end:1rem;
+    padding-block-end: 1rem;
 }
-.popup-content .error-icon{
-    width : 100px;
+
+.popup-content .error-icon {
+    width: 100px;
     height: 100px;
-    /* background-color: red; */
     position: absolute;
     top: -50%;
     left: 50%;
     transform: translateX(-50%);
-    /* transform: translateX(-50%); */
     transition: all 2s;
 }
+
+.login-form h6 a {
+    color: white;
+}
+
+.form-control:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, .35);
+}
+
+/* .form-error{
+    
+    box-shadow: 0 0 0 0.25rem rgba(196, 14, 14, 0.35);
+}
+
+.form-success{
+    box-shadow: 0 0 0 0.25rem rgba(2, 153, 14, 0.35);
+} */
