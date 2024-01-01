@@ -3,9 +3,21 @@ const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userPassword = document.getElementById('userPassword');
 const signupButton = document.getElementById('signup-btn');
+
 var users = [];
 let user = {};
 let isExisted;
+
+// userEmail.addEventListener('keydown', function (event) {
+//     validateEmail(event.target.value) ? emailFormField.classList.replace('form-control:focus', 'form-success') : emailFormField.classList.add('form-error')
+
+// });
+// userPassword.addEventListener('keydown', function (event) {
+//     if (!validatePassword(event.target.value)) {
+//         userPassword.classList.remove('form-control:focus');
+//         userPassword.classList.add('form-error');
+//     }
+// });
 
 signupButton.addEventListener('click', signUpUser)
 
@@ -59,5 +71,4 @@ function clear() {
     userEmail.value = '';
     userPassword.value = '';
 }
-
 
