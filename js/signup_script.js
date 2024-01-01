@@ -1,48 +1,52 @@
-
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userPassword = document.getElementById('userPassword');
 const signupButton = document.getElementById('signup-btn');
-
 var users = [];
 let user = {};
-let isExisted;
-
-// userEmail.addEventListener('keydown', function (event) {
-//     validateEmail(event.target.value) ? emailFormField.classList.replace('form-control:focus', 'form-success') : emailFormField.classList.add('form-error')
-
-// });
-// userPassword.addEventListener('keydown', function (event) {
-//     if (!validatePassword(event.target.value)) {
-//         userPassword.classList.remove('form-control:focus');
-//         userPassword.classList.add('form-error');
-//     }
-// });
+let isExisted = false;
 
 signupButton.addEventListener('click', signUpUser)
 
 function signUpUser() {
+    console.log("SignUpUser function is called");
+
     user = {
         userName: userName.value,
         userEmail: userEmail.value,
         userPassword: userPassword.value
-    }
+    };
+    console.log("User object:", user);
+
     users = JSON.parse(localStorage.getItem('users'));
+    console.log("Existing users:", users);
+
     if (users == null) {
-        localStorage.setItem('users', JSON.stringify([user]));
+        console.log("No existing users, creating new array");
+        addUser(users, user);
     } else {
-        users.forEach(user => {
-            user.userEmail == userEmail.value ? isExisted = true : isExisted = false;
+        users.forEach(existingUser => {
+            console.log("Checking user:", existingUser);
+            if (existingUser.userEmail == userEmail.value) {
+                isExisted = true;
+                console.log("User already exists");
+            }
         });
-        isExisted ? alert('User Existed') : addUser(users, user)
+        isExisted ? alert('User Existed') : addUser(users, user);
     }
 }
 
 function addUser(users, user) {
+
     if (validateEmail(user.userEmail)) {
         if (validatePassword(user.userPassword)) {
-            users.push(user);
-            localStorage.setItem('users', JSON.stringify(users));
+            if (users == null) {
+                localStorage.setItem('users', JSON.stringify([user]));
+            } else {
+                users.push(user);
+                localStorage.setItem('users', JSON.stringify(users));
+            }
+
             alert(`User Created Successfully`)
             clear();
             window.location.replace('../index.html')
@@ -57,18 +61,16 @@ function addUser(users, user) {
 
 function validateEmail(email) {
     const emailValidateRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log(emailValidateRegEx.test(email))
     return emailValidateRegEx.test(email);
 }
 function validatePassword(password) {
     console.log(password.length)
     console.log(password.length > 8)
     return password.length >= 8;
-
 }
-
 function clear() {
     userName.value = '';
     userEmail.value = '';
     userPassword.value = '';
 }
-
