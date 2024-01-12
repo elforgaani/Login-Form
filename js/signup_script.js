@@ -49,7 +49,7 @@ function addUser(users, user) {
 
             alert(`User Created Successfully`)
             clear();
-            window.location.replace('../index.html')
+            window.location = '../index.html';
         } else {
             alert('Invalid Password');
         }

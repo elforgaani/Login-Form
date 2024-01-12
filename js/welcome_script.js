@@ -4,5 +4,5 @@ userInfo.innerText = `Welcome ${localStorage.getItem('loggedInUser')}`
 
 logoutBtn.addEventListener('click', function () {
     localStorage.removeItem('loggedInUser');
-    window.location.replace('../index.html');
+    window.location = '../index.html';
 })

@@ -28,7 +28,7 @@ function signInUser() {
     if (isExisted) {
         if (checkAuth(cachedUser)) {
             localStorage.setItem('loggedInUser', loggedInUser);
-            window.location.replace('../welcome.html');
+            window.location = '../welcome.html';
         } else { alert('Wrong Password'); }
     } else {
         alert('User Not Found')
